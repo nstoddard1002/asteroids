@@ -48,6 +48,10 @@ def main():
             if player_one.collision_check(asteroid_obj) == True:
                 print("Game over!")
                 sys.exit()
+            for pellet in shots:
+                if pellet.collision_check(asteroid_obj) == True:
+                    asteroid_obj.kill()
+                    pellet.kill()
         for item_draw in drawable:
             item_draw.draw(screen)
         pygame.display.flip()
