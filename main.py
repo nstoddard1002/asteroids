@@ -50,7 +50,7 @@ def main():
                 sys.exit()
             for pellet in shots:
                 if pellet.collision_check(asteroid_obj) == True:
-                    asteroid_obj.kill()
+                    asteroid_obj.split()
                     pellet.kill()
         for item_draw in drawable:
             item_draw.draw(screen)
